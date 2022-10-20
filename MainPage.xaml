@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MovieAssignment.MainPage">
+
+
+    <StackLayout BackgroundColor="LemonChiffon">
+        <Label Text="Movie List"  FontFamily="Arial" FontSize="Medium" TextColor="Black"
+           HorizontalOptions="Center" VerticalOptions="Start" />
+        <StackLayout Orientation="Horizontal" BackgroundColor="LemonChiffon"  >
+            <Entry x:Name="txtSearchBox" HorizontalOptions="FillAndExpand" VerticalOptions="Center"></Entry>
+            <Button x:Name="btnSearch" Text="Search"  HorizontalOptions="End" VerticalOptions="Center" Clicked="btnSearch_Clicked"></Button>
+        </StackLayout>
+        <ListView x:Name="lstCustomerList" ItemSelected="lstCustomerList_ItemSelected" ItemTapped="lstCustomerList_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+
+                            <Image Source="{Binding ImageName}" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, 0, 600, 50 " Aspect="AspectFill"/>
+
+
+                            <StackLayout Padding="0, 10, 0, 100" Orientation="Vertical" VerticalOptions="StartAndExpand" >
+                                <Label Text = "Title:" FontSize="8" TextColor="Black"/>
+                                <Label Text = "Genres:" FontSize="8" TextColor="Black"/>
+                                <Label Text = "Run time:" FontSize="8" TextColor="Black"/>
+                                <Label Text = "Release Date:" FontSize="8" TextColor="Black"/>
+                                <Label Text = "Cast:" FontSize="8" TextColor="Black"/>
+                                <Label Text = "Daily Fee: £" FontSize="8" TextColor="Black"/>
+                            </StackLayout>
+
+                            <StackLayout Padding="0, 10, 0, 100" Orientation="Vertical" VerticalOptions="StartAndExpand" >
+                                <Label Text = "{Binding mTitle}" FontSize="8" TextColor="Black"  />
+                                <Label Text = "{Binding Genres}" FontSize="8" TextColor="Black"  />
+                                <Label Text = "{Binding Runtime}" FontSize="8" TextColor="Black"  />
+                                <Label Text = "{Binding ReleaseDate}" FontSize="8" TextColor="Black"  />
+                                <Label Text = "{Binding Cast}" FontSize="8" TextColor="Black"  />
+                                <Label Text = "{Binding DailyFee}" FontSize="8" TextColor="Black"  />
+                            </StackLayout>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnAdd" Text="Add Movie" HorizontalOptions="Center" TextColor="Chocolate" BackgroundColor="Blue" Clicked="btnAdd_Clicked"></Button>
+    </StackLayout>
+
+</ContentPage>

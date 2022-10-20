@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MovieAssignment.ProfilePage">
+
+    <ContentPage.Content >
+
+        <StackLayout BackgroundColor="LemonChiffon">
+            <StackLayout BackgroundColor="LemonChiffon" Orientation="Vertical" >
+                
+                <StackLayout Orientation="Horizontal" Padding="15,15" VerticalOptions="Start">
+                   
+                    <Label Text="Order confirmed page" TextColor="DarkRed" ></Label>
+                </StackLayout>
+                
+                <StackLayout HorizontalOptions="Center">
+                    <Label Text="My Order infomation :" TextColor="Navy" FontSize="12"></Label>
+                </StackLayout>
+
+                <!--<StackLayout Orientation="Horizontal" >-->
+                    <Label Text="Title :" TextColor="Black" FontSize="9"></Label>
+                    <Label x:Name="getTitle"  TextColor="Black" FontSize="9"></Label>
+               
+                
+                <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Center" >-->
+                    <Label Text="Genres :" TextColor="Black" FontSize="9"></Label>
+                    <Label x:Name="getGenres" TextColor="Black" FontSize="9"></Label>
+                <!--</StackLayout>
+
+
+                <StackLayout Orientation="Horizontal">-->
+                    <Label Text="Run Time :" TextColor="Black" FontSize="9"></Label>
+                    <Label x:Name="getRunTime" TextColor="Black" FontSize="9"></Label>
+                <!--</StackLayout>
+
+                <StackLayout Orientation="Horizontal">-->
+                    <Label Text="Cast :" TextColor="Black" FontSize="9"></Label>
+                    <Label x:Name="getCast" TextColor="Black" FontSize="9"></Label>
+                <!--</StackLayout >
+
+                <StackLayout Orientation="Horizontal">-->
+                    <Label Text="Release date :" TextColor="Black" FontSize="9"></Label>
+                    <Label x:Name="getRD" TextColor="Black" FontSize="9"></Label>
+                    <!--<StackLayout>
+
+                        <StackLayout Orientation="Horizontal">-->
+                            <Label Text="Daily Fee: £" TextColor="Black" FontSize="9"></Label>
+                            <Label x:Name="getDF" TextColor="Black" FontSize="9"></Label>
+                        <!--</StackLayout>
+
+                        <StackLayout Orientation="Horizontal">-->
+                            <Label Text="  user name:" TextColor="Black" FontSize="9"></Label>
+                            <Label x:Name="getUsername" TextColor="Black" FontSize="9"></Label>
+                        <!--</StackLayout>-->
+                    <!--</StackLayout>
+
+                    <StackLayout Orientation="Horizontal">-->
+                        <Label Text="Email:" TextColor="Black" FontSize="9"></Label>
+                        <Label x:Name="getEmail" TextColor="Black" FontSize="9"></Label>
+                        
+                    <!--</StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">-->
+                        <Label Text="Home address:" TextColor="Black" FontSize="9"></Label>
+                        <Label x:Name="getAddress" TextColor="Black" FontSize="9"></Label>
+                    <!--</StackLayout>
+
+                    <StackLayout  Orientation="Horizontal" >-->
+                        <Label Text="start date :" TextColor="Black" FontSize="9"></Label>
+                        <Label x:Name="getLoanDate" TextColor="Black" FontSize="9"></Label>
+                    <!--</StackLayout>
+
+                    <StackLayout Orientation="Horizontal">-->
+                        <Label Text="return date :" TextColor="Black" FontSize="9"></Label>
+                        <Label x:Name="getReturnDate" TextColor="Black" FontSize="9"></Label>
+                    </StackLayout>
+                <!--</StackLayout>
+
+                <StackLayout Orientation="Horizontal">-->
+                        <Label Text="Rent Type :" TextColor="Black" FontSize="9"></Label>
+                        <Label x:Name="getType" TextColor="Black" FontSize="9"></Label>
+                    <!--</StackLayout>
+
+                    <StackLayout Orientation="Horizontal">-->
+                        <Label Text="total days:" TextColor="Black" FontSize="9"></Label>
+                        <Label x:Name="getTotalDays" TextColor="Black" FontSize="9"></Label>
+
+                    
+
+                    <StackLayout  Padding="70,15,70,15">
+                        <Button Text="Back to Home page"  Clicked="btnclicked" FontSize="8" BackgroundColor="Chocolate" TextColor="White"  HeightRequest="30" WidthRequest="50" ></Button>
+                    </StackLayout>
+                </StackLayout>
+            
+    </ContentPage.Content>
+</ContentPage>

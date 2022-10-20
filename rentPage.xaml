@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MovieAssignment.rentPage">
+
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="LemonChiffon" Orientation="Vertical" >
+            
+            <StackLayout  Orientation="Vertical" >
+                <StackLayout>
+                    <Label Text="Movie details" TextColor="Navy" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="14" x:Name="pageTitle"/>
+
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Title :" TextColor="Black" FontSize="10"></Label>
+                        <Label x:Name="mTitle" TextColor="Black" FontSize="10"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Genres :" TextColor="Black" FontSize="10"></Label>
+                        <Label x:Name="Genres" TextColor="Black" FontSize="10"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Run Time :" TextColor="Black" FontSize="10"></Label>
+                        <Label x:Name="Runtime" TextColor="Black" FontSize="10"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Cast :" TextColor="Black" FontSize="10"></Label>
+                        <Label x:Name="Cast" TextColor="Black" FontSize="10"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Release Date :" TextColor="Black" FontSize="10"></Label>
+                        <Label x:Name="ReleaseDate" TextColor="Black" FontSize="10"></Label>
+                    </StackLayout>
+
+
+                    <!--<Label  Text="Movie Title:"  x:Name="mTitle" TextColor="Black" FontSize="10" HorizontalOptions="Center"></Label>
+                <Label  Text="Genres:"  x:Name="Genres" TextColor="Black" FontSize="10" HorizontalOptions="Center"></Label>
+                <Label  Text="Run time:"  x:Name="Runtime" TextColor="Black" FontSize="10" HorizontalOptions="Center"></Label>
+                <Label  Text="Cast:"  x:Name="Cast" TextColor="Black" FontSize="10" HorizontalOptions="Center"></Label>
+                <Label  Text="Release Date:"  x:Name="ReleaseDate" TextColor="Black" FontSize="10" HorizontalOptions="Center"></Label>-->
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="Daily fee: £" TextColor="Black" FontSize="10"></Label>
+                    <Label x:Name="DailyFee" TextColor="Black" FontSize="10"></Label>
+                </StackLayout>
+
+
+                <StackLayout BackgroundColor="AliceBlue">
+                    <Label Text="Fill in your detail:" TextColor="Red" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="12" x:Name="PageTitle"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Entry  Placeholder="Enter your name"  x:Name="enterName" FontSize="10" HorizontalOptions="Center" TextChanged="textChange"></Entry>
+                <Entry  Placeholder="Enter your home address"  x:Name="enterAddress"  FontSize="10" HorizontalOptions="Center"  ></Entry>
+                    
+                    
+                    
+                <Entry  Placeholder="Enter your email address"  x:Name="enterEmail"  FontSize="10" HorizontalOptions="Center"  ></Entry>
+                <!--<Entry  Placeholder="Enter yourdiscount code/voucher.  "  x:Name="enterCode" FontSize="10" HorizontalOptions="Center" ></Entry>-->
+                    <Label Text="pick a rent date from :" FontSize="10" TextColor="Black" HorizontalOptions="Center"></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <DatePicker x:Name="pcikDate" MinimumDate="4/11/2019" MaximumDate="12/12/2020" FontSize="10"  />
+                    <TimePicker x:Name="timep" FontSize="10" ></TimePicker>
+                </StackLayout>
+
+                <Label Text=" pick a return date at :" FontSize="10" TextColor="Black" HorizontalOptions="Center" ></Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <DatePicker x:Name="datepick" MinimumDate="04/11/2019" MaximumDate="12/12/2020"   FontSize="10" />
+                    <TimePicker x:Name="timepicker" FontSize="10" ></TimePicker>
+                </StackLayout >
+
+                <StackLayout HorizontalOptions="Center"  >
+                    <Label Text=" choose a renting type :" FontSize="10" TextColor="Black"></Label>
+                    <Picker VerticalOptions="Center" FontSize="10" HorizontalOptions="Center" WidthRequest="100" x:Name="pickerType">
+                        <Picker.Items>
+                            <x:String>physical DVD copy</x:String>
+                            <x:String>streaming</x:String>
+
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center"  VerticalOptions="EndAndExpand" Orientation="Horizontal">
+                    <Button x:Name="Back" Text="Back" TextColor="DarkOliveGreen" FontSize="12" Clicked="PrevPage_clicked" HeightRequest="40" ></Button>
+                    <Button x:Name="submit" Text="Order" TextColor="DarkRed" FontSize="12"  Clicked="submitClicked" HeightRequest="40"></Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

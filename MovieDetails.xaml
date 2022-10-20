@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MovieAssignment.MovieDetails">
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LemonChiffon">
+            <Label Text="Movie Details!" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" 
+                   TextColor="Black"/>
+            <TableView x:Name="tblCustomerDetails" IsVisible="True">
+                <TableRoot>
+                    <TableSection Title="Movie's information">
+                        <EntryCell Text="{Binding mTitle, Mode=TwoWay}" Placeholder="mTitle"   />
+                        <EntryCell Text="{Binding Genres, Mode=TwoWay}" Placeholder="Genres" />
+                        <EntryCell Text="{Binding Runtime, Mode=TwoWay}" Placeholder="Runtime" />
+                        <EntryCell Text="{Binding ReleaseDate ,Mode=TwoWay}" Placeholder="ReleaeDate"/>
+                        <EntryCell Text="{Binding Cast, Mode=TwoWay}" Placeholder="Cast" />
+                        <EntryCell Text="{Binding DailyFee, Mode=TwoWay}" Placeholder="DailyFee" />
+
+         
+                                   
+                        <ImageCell Text="Image" Detail="Profile" ImageSource="{Binding ImageName}" x:Name="imgCell"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button x:Name="btnSave" Text="Rent" TextColor="Green" Clicked="btnSave_Clicked"></Button>
+            <Button x:Name="btnCancel" Text="Go Back" TextColor="Red" Clicked="btnCancel_Clicked"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>  
